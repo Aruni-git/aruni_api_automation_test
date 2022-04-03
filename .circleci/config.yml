@@ -11,14 +11,13 @@ jobs:
       - run: echo "A first hello"
       - run: mkdir -p my_workspace
       - run: echo "Trying out workspaces" > my_workspace/echo-output
-      - persist_to_workspace:
+      - persist_to_workspace: .circleci
           # Must be an absolute path, or relative path from working_directory
-          .circleci
 
-          root: my_workspace
+
+          root: .config:yml #my_workspace
           # Must be relative path from root
-          .circleci/config:
-            yml:
+
 
           paths:
             - echo-output
