@@ -1,6 +1,5 @@
 package utils;
 
-import com.api.models.User;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;

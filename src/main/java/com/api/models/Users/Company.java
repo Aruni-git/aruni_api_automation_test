@@ -1,4 +1,4 @@
-package com.api.models;
+package com.api.models.Users;
 
 public class Company {
      String name, catchPhrase,bs;

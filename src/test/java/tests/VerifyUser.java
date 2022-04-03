@@ -1,7 +1,7 @@
 package tests;
 
-import com.api.models.User;
-import com.api.services.UserService;
+import com.api.models.Users.User;
+import com.api.services.Users.UserService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,12 +12,7 @@ import static org.testng.Assert.assertNotEquals;
 
 public class VerifyUser {
 
-/*    @Test(priority = 1)
-    public void testGetAllUser() {
-        UserService userService = new UserService();
-        userService.getAllUsers();
-    }*/
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void testGetUser() {
         UserService userService = new UserService();
         String userName = "Delphine";

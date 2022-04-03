@@ -1,4 +1,7 @@
-package com.api.models;
+package com.api.models.Users;
+
+import com.api.models.Users.Address;
+import com.api.models.Users.Company;
 
 public class User {
 

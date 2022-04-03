@@ -1,6 +1,6 @@
 package tests;
 
-import com.api.services.UserService;
+import com.api.services.Users.UserService;
 import org.testng.annotations.Test;
 
 public class VerifyPosts {
