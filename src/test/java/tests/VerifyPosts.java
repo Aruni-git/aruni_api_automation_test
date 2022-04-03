@@ -19,6 +19,5 @@ public class VerifyPosts {
         PostService postService = new PostService();
         List<Post> posts = postService.getPostsByUser(userid);
         Assert.assertNotNull(posts);
-
     }
 }

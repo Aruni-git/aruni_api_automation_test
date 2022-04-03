@@ -11,8 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.stream.Collectors.toList;
+
 public class PostService {
-    public List<Post> getPostsByUser(int userId) {
+    public  List<Post> getPostsByUser(int userId) {
         RestClient restClient = new RestClient("https://jsonplaceholder.typicode.com", "posts");
         Map<String, Object> map = new HashMap<String, Object>() {{
             put("userid", userId);
@@ -26,6 +28,7 @@ public class PostService {
             posts = new ObjectMapper().readValue(json, new TypeReference<ArrayList<Post>>() {
 
             });
+
         } catch (Exception ex) {
             System.out.println(ex);
         }

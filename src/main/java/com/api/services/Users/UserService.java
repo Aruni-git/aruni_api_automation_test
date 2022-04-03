@@ -16,7 +16,6 @@ public class UserService {
         }};
         Response response;
         response = restClient.get(null, null, map);
-        ObjectMapper mapper = new ObjectMapper();
         User requestedUser = null;
         try {
             String json = response.getBody().asString();
@@ -26,7 +25,7 @@ public class UserService {
                     .filter(user -> username.equals(user.getUsername()))
                     .findAny()
                     .orElse(null);
-
+            System.out.println("Response Body is =>  " + response.asString());
         } catch (Exception ex) {
             System.out.println(ex);
         }
