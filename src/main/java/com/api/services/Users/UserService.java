@@ -9,7 +9,7 @@ import java.util.*;
 
 public class UserService {
 
-    public List<User> getUser(String username) {
+    public User getUser(String username) {
         RestClient restClient = new RestClient("https://jsonplaceholder.typicode.com", "users");
         Map<String, Object> map = new HashMap<String, Object>() {{
             put("username", username);
@@ -17,16 +17,20 @@ public class UserService {
         Response response;
         response = restClient.get(null, null, map);
         ObjectMapper mapper = new ObjectMapper();
-        List<User> users = null;
+        User requestedUser = null;
         try {
             String json = response.getBody().asString();
-            users= new ObjectMapper().readValue(json, new TypeReference<ArrayList <User>>() {
+            List<User> users= new ObjectMapper().readValue(json, new TypeReference<ArrayList <User>>() {
             });
+            requestedUser = users.stream()
+                    .filter(user -> username.equals(user.getUsername()))
+                    .findAny()
+                    .orElse(null);
 
         } catch (Exception ex) {
             System.out.println(ex);
         }
-        return users;
+        return requestedUser;
     }
 
 

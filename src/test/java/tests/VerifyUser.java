@@ -15,14 +15,9 @@ public class VerifyUser {
     @Test(priority = 1)
     public void testGetUser() {
         UserService userService = new UserService();
-        String userName = "Delphine";
-        List<User> users = userService.getUser(userName);
-        Assert.assertNotNull(users);
-        User requestedUser = users.stream()
-                .filter(user -> userName.equals(user.getUsername()))
-                .findAny()
-                .orElse(null);
-        Assert.assertNotNull(requestedUser);
-
-    }
+        String username = "Delphine";
+        User user = userService.getUser(username);
+        Assert.assertNotNull(user);
+        Assert.assertEquals(username, user.getUsername());
+   }
 }
