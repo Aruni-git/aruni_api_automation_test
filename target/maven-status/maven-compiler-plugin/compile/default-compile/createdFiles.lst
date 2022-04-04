@@ -1,0 +1,16 @@
+com\api\services\Comments\CommentService.class
+com\api\models\Posts\Post.class
+com\api\services\Comments\CommentService$1.class
+com\api\services\Users\UserService.class
+com\api\models\Comments\Comment.class
+com\api\models\Users\User.class
+com\api\models\Users\Address.class
+com\api\services\Users\UserService$2.class
+com\api\services\Users\UserService$1.class
+utils\RestClient.class
+com\api\services\Comments\CommentService$2.class
+com\api\models\Users\Company.class
+com\api\models\Users\Geo.class
+com\api\services\Posts\PostService$1.class
+com\api\services\Posts\PostService$2.class
+com\api\services\Posts\PostService.class
