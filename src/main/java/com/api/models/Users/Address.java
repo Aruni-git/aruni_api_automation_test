@@ -1,8 +1,11 @@
 package com.api.models.Users;
 
 public class Address {
-    String street, suite, city, zipcode;
-      Geo geo;
+    String street;
+    String suite;
+    String city;
+    String zipcode;
+    Geo geo;
 
     public String getStreet() {
         return street;

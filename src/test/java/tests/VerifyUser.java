@@ -5,11 +5,6 @@ import com.api.services.Users.UserService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotEquals;
-
 public class VerifyUser {
 
     @Test(priority = 1)

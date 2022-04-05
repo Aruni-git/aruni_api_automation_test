@@ -1,7 +1,9 @@
 package com.api.models.Users;
 
 public class Company {
-     String name, catchPhrase,bs;
+    String name;
+    String catchPhrase;
+    String bs;
 
     public String getName() {
         return name;

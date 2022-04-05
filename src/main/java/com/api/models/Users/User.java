@@ -1,12 +1,13 @@
 package com.api.models.Users;
 
-import com.api.models.Users.Address;
-import com.api.models.Users.Company;
-
 public class User {
 
     Integer id;
-    String name, username, email, phone, website;
+    String name;
+    String username;
+    String email;
+    String phone;
+    String website;
     Address address;
 
     public Integer getId() {

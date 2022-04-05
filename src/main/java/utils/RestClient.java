@@ -6,42 +6,34 @@ import io.restassured.specification.RequestSpecification;
 
 import java.util.Map;
 import io.restassured.response.Response;
+
 public class RestClient {
 
+    String baseUrl;
+    String basePath;
 
-    String baseUrl ;
-    String basePath ;
-
-/*    public RestClient(String url, String path) {
-        this.baseUrl=url;
-        this.basePath=path;
-
-    }*/
-
-    public RestClient  (String url, String path ) {
-        this.baseUrl=url;
-        this.basePath=path;
-
-
+    public RestClient(String url, String path) {
+        this.baseUrl = url;
+        this.basePath = path;
     }
 
-    public io.restassured.response.Response post(Object body, Map<String,String> headers, Map<String,Object> queryParam){
-        RequestSpecification requestSpecification = getRequestSpec(body,headers,queryParam);
+    public io.restassured.response.Response post(Object body, Map<String, String> headers, Map<String, Object> queryParam) {
+        RequestSpecification requestSpecification = getRequestSpec(body, headers, queryParam);
         io.restassured.response.Response resp = RestAssured.given().spec(requestSpecification).when().post();
 
         return resp;
     }
 
 
-    public io.restassured.response.Response put(Object body, Map<String,String> headers, Map<String,Object> queryParam){
-        RequestSpecification requestSpecification = getRequestSpec(body,headers,queryParam);
+    public io.restassured.response.Response put(Object body, Map<String, String> headers, Map<String, Object> queryParam) {
+        RequestSpecification requestSpecification = getRequestSpec(body, headers, queryParam);
         io.restassured.response.Response resp = RestAssured.given().spec(requestSpecification).when().put();
 
         return resp;
     }
 
-    public io.restassured.response.Response get(Object body, Map<String,String> headers, Map<String,Object> queryParam){
-        RequestSpecification requestSpecification = getRequestSpec(body,headers,queryParam);
+    public io.restassured.response.Response get(Object body, Map<String, String> headers, Map<String, Object> queryParam) {
+        RequestSpecification requestSpecification = getRequestSpec(body, headers, queryParam);
         io.restassured.response.Response resp = RestAssured.given().spec(requestSpecification).when().get();
 
         return resp;
@@ -76,9 +68,6 @@ public class RestClient {
                 requestSpecBuilder.addQueryParam(q,queryParam.get(q));
             }
         }
-
         return requestSpecBuilder.build();
-
     }
-
 }

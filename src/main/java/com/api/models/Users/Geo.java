@@ -1,7 +1,8 @@
 package com.api.models.Users;
 
 public class Geo {
-        String lat,lng;
+        String lat;
+        String lng;
 
         public String getLat() {
                 return lat;

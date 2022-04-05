@@ -12,9 +12,10 @@ import java.util.List;
 public class VerifyPosts {
     @Test
     public void testGetAllPosts() {
-        UserService userServcie = new UserService();
+        UserService userService = new UserService();
         String username = "Delphine";
-        User user = userServcie.getUser(username);
+        User user = userService.getUser(username);
+
         int userid = user.getId();
         PostService postService = new PostService();
         List<Post> posts = postService.getPostsByUser(userid);

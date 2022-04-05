@@ -1,8 +1,10 @@
 package com.api.models.Posts;
 
 public class Post {
-    int userId, id;
-    String title, body;
+    int userId;
+    int id;
+    String title;
+    String body;
 
     public int getUserId() {
         return userId;
